@@ -1,11 +1,9 @@
-document.body.style.backgroundColor = "orange"
-class ButtonJs extends HTMLElement {
-    constructor() {
-        super();
-    }
-}
+let myElm = document.createElement("button");	
 
-customElements.define('button-js', ButtonJs);
-var button = new ButtonJs();
-button.innerHTML = "<button>Test Button</button>"
-document.body.appendChild(button);
+myElm.innerText = 'Test';		
+myElm.style.color = 'red';		
+myElm.style.position = 'absolute';
+myElm.style.right = '5%';
+myElm.style.bottom = '5%';
+
+document.body.appendChild(myElm);
