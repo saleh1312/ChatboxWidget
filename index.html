@@ -4,13 +4,25 @@
 <head>
     <title>Page Title</title>
     <meta name="description" content="Minimal HTML code.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <h1>Test</h1>
+    <script>
+        class ButtonJs extends HTMLElement {
+            constructor() {
+                super();
+            }
+        }
+
+        customElements.define('button-js', ButtonJs);
+        var button = new ButtonJs();
+        button.innerHTML = "<button>Test Button</button>"
+        document.body.appendChild(button);
+    </script>
 </body>
 
-<script type="application/javascript"
-    src="https://cdn.statically.io/gh/MuhamedAhmed11/bootstrap/85208ae5570aeefe4e94c1ceb29ca3b6ffdf83a1/js/src/button.js"></script>
+<!-- <script type="application/javascript" src="https://cdn.statically.io/gh/MuhamedAhmed11/ButtonJs/index"></script> -->
+
 
 </html>
