@@ -56,10 +56,10 @@ chatWidget.appendChild(chatForm);
 
 // myElm.innerText = 'Test';
 // myElm.style.color = 'red';
-chatbutton.style.position = 'absolute';
-chatbutton.style.right = '5%';
-chatbutton.style.bottom = '5%';
-chatbutton.style.zIndex = '1000000';
-chatWidget.style.zIndex = '1000000';
+// chatbutton.style.position = 'absolute';
+// chatbutton.style.right = '5%';
+// chatbutton.style.bottom = '5%';
+// chatbutton.style.zIndex = '1000000';
+// chatWidget.style.zIndex = '1000000';
 
 document.body.appendChild(chatWidget);
