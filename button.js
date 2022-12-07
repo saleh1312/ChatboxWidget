@@ -1,3 +1,8 @@
+var cssFile = document.createElement('link');
+cssFile.rel = 'stylesheet';
+cssFile.href = 'button.css';
+document.head.appendChild(cssFile);
+
 //  Chat Widget Button
 let chatbutton = document.createElement('button');
 chatbutton.className = 'open-button';
@@ -51,9 +56,9 @@ chatWidget.appendChild(chatForm);
 
 // myElm.innerText = 'Test';
 // myElm.style.color = 'red';
-chatbutton.style.position = 'absolute';
-chatbutton.style.right = '5%';
-chatbutton.style.bottom = '5%';
-chatbutton.style.zIndex = '1000000';
+// chatbutton.style.position = 'absolute';
+// chatbutton.style.right = '5%';
+// chatbutton.style.bottom = '5%';
+// chatbutton.style.zIndex = '1000000';
 
-document.body.appendChild(chatbutton);
+document.body.appendChild(chatWidget);
