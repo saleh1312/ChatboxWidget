@@ -47,14 +47,16 @@ chatForm.append(button2);
 //
 chatWidget.appendChild(chatForm);
 
-// myElm.innerText = 'Test';
-// myElm.style.color = 'red';
-// myElm.style.position = 'absolute';
-// myElm.style.right = '5%';
-// myElm.style.bottom = '5%';
-// myElm.style.zIndex = '1000000';
+let myElm = document.createElement('button');
 
-document.body.appendChild(chatWidget);
+myElm.innerText = 'Test';
+myElm.style.color = 'red';
+myElm.style.position = 'absolute';
+myElm.style.right = '5%';
+myElm.style.bottom = '5%';
+myElm.style.zIndex = '1000000';
+
+document.body.appendChild(myElm);
 
 // function openForm() {
 //   //   document.getElementById('myForm').style.display = 'block';
