@@ -18,7 +18,7 @@ body {
   bottom: 23px;
   right: 28px;
   width: 280px;
-  z-index: 10000;
+  /* z-index: 10000; */
 }
 
 /* The popup chat - hidden by default */
