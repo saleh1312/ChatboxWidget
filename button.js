@@ -1,6 +1,8 @@
 var cssFile = document.createElement('link');
 cssFile.rel = 'stylesheet';
-cssFile.href = 'button.css';
+// cssFile.href = 'button.css';
+cssFile.href =
+  'https://cdn.statically.io/gh/MuhamedAhmed11/ButtonJs/e7429bd5fde0cabd238404dd22a0ddf347efff1b/button.css';
 document.head.appendChild(cssFile);
 
 //  Chat Widget Button
@@ -33,22 +35,25 @@ msgTextarea.placeholder = 'Type message..';
 msgTextarea.name = 'msg';
 msgTextarea.required = true;
 
-let button1 = document.createElement('button');
-button1.className = 'btn';
-button1.innerText = 'Send';
-button1.type = 'submit';
+let sendButton = document.createElement('button');
+sendButton.className = 'btn';
+sendButton.innerText = 'Send';
+sendButton.type = 'submit';
 
-let button2 = document.createElement('button');
-button2.className = 'btn cancel';
-button2.innerText = 'Close';
-button2.type = 'button';
+let closeButton = document.createElement('button');
+closeButton.className = 'btn cancel';
+closeButton.innerText = 'Close';
+closeButton.type = 'button';
+closeButton.onclick = function closeForm() {
+  document.getElementById('myForm').style.display = 'none';
+};
 
 //
 chatForm.append(header1);
 chatForm.append(label);
 chatForm.append(msgTextarea);
-chatForm.append(button1);
-chatForm.append(button2);
+chatForm.append(sendButton);
+chatForm.append(closeButton);
 //
 chatWidget.appendChild(chatForm);
 
