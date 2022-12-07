@@ -56,4 +56,4 @@ chatWidget.appendChild(chatForm);
 // myElm.style.bottom = '5%';
 // myElm.style.zIndex = '1000000';
 
-document.body.appendChild(chatWidget);
+document.body.appendChild(chatbutton);
