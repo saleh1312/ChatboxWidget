@@ -59,6 +59,6 @@ chatWidget.appendChild(chatForm);
 // chatbutton.style.position = 'absolute';
 // chatbutton.style.right = '5%';
 // chatbutton.style.bottom = '5%';
-// chatbutton.style.zIndex = '1000000';
+chatWidget.style.zIndex = '1000000';
 
-document.body.appendChild(chatbutton);
+document.body.appendChild(chatWidget);
