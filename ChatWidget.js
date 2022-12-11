@@ -1,6 +1,8 @@
 var cssFile = document.createElement('link');
 cssFile.rel = 'stylesheet';
-cssFile.href = 'ChatWidget.css';
+cssFile.href =
+  'https://cdn.statically.io/gh/MuhamedAhmed11/ButtonJs/c32e35a3fba8ae7f3fbde2d9f5674fac59c3909b/ChatWidget.css';
+// cssFile.href = 'ChatWidget.css';
 document.head.appendChild(cssFile);
 
 class ChatWidget {
