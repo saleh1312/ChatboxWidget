@@ -35,7 +35,6 @@ class ChatWidget {
     })
       .then((resp) => resp.json())
       .then(async (resp) => {
-        // console.log(resp);
         this.messages.push({
           name: 'Pi bot',
           message: 'typing...',
@@ -286,7 +285,7 @@ class ChatWidget {
           if (item.type === 'text_buttons') {
             html +=
               '<div class="messages__item messages__item--visitor">' +
-              '<div class="card" style="width: 18rem;">' +
+              '<div class="card msgCard" style="width: 18rem; background-color: #e0e0e0;">' +
               '<div class="card-header">' +
               `${item.message.answer.message.text}` +
               '</div>' +
@@ -303,7 +302,7 @@ class ChatWidget {
           if (item.type === 'image') {
             html +=
               '<div class="messages__item messages__item--visitor">' +
-              '<div class="card" style="width: 18rem;">' +
+              '<div class="card msgCard" style="width: 18rem; background-color: #e0e0e0;">' +
               '<div class="card-body">' +
               `<img src=${item.message.answer.message.attachment.payload.url} width='180rem' />` +
               '</div>' +
@@ -312,10 +311,9 @@ class ChatWidget {
           }
 
           if (item.type === 'url') {
-            console.log(item.message.answer.message.text);
             html +=
               '<div class="messages__item messages__item--visitor">' +
-              '<div class="card" style="width: 18rem;">' +
+              '<div class="card msgCard" style="width: 18rem; background-color: #e0e0e0;">' +
               '<div class="card-body">' +
               `<a>${item.message.answer.message.text}` +
               `</a>` +
