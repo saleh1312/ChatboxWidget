@@ -30,10 +30,15 @@ class ChatWidget {
     console.log(localStorage.getItem('userId'));
     fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/website', {
       method: 'POST',
-      body: JSON.stringify({ message: msg, sid: this.sid,userid: "hoenojlk1" })
+      body: JSON.stringify({ message: msg, sid: this.sid,userid: "hoenojlk1" }),
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     })
       .then((resp) => resp.json())
       .then(async (resp) => {
+      console.log("ssss")
         this.messages.push({
           name: 'Pi bot',
           message: 'typing...',
