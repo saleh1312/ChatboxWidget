@@ -25,9 +25,9 @@ class ChatWidget {
   }
 
   sendMessage(msg, chatbox_support) {
-    fetch('http://127.0.0.1:8080/website', {
+    fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/website', {
       method: 'POST',
-      body: JSON.stringify({ message: msg, sid: this.sid }),
+      body: JSON.stringify({ message: msg, sid: this.sid,userid: localStorage.getItem('userId') }),
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
@@ -144,7 +144,7 @@ class ChatWidget {
         )
           return;
         if (this.userId === '') {
-          fetch('http://127.0.0.1:8080/generateId', {
+          fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/generateId', {
             method: 'POST',
             body: JSON.stringify({ test: 'test' }),
             mode: 'cors',
