@@ -40,7 +40,7 @@ class ChatWidget {
     })
       .then((resp) => resp.json())
       .then(async (resp) => {
-      console.log("ssss")
+      console.log(resp)
         this.messages.push({
           name: 'Pi bot',
           message: 'typing...',
