@@ -25,6 +25,9 @@ class ChatWidget {
   }
 
   sendMessage(msg, chatbox_support) {
+    console.log(msg);
+    console.log(this.sid);
+    console.log(localStorage.getItem('userId'));
     fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/website', {
       method: 'POST',
       body: JSON.stringify({ message: msg, sid: this.sid,userid: localStorage.getItem('userId') }),
