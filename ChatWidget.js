@@ -30,11 +30,7 @@ class ChatWidget {
     console.log(localStorage.getItem('userId'));
     fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/website', {
       method: 'POST',
-      body: JSON.stringify({ message: msg, sid: this.sid,userid: localStorage.getItem('userId') }),
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      body: JSON.stringify({ message: msg, sid: this.sid,userid: localStorage.getItem('userId') })
     })
       .then((resp) => resp.json())
       .then(async (resp) => {
@@ -149,11 +145,7 @@ class ChatWidget {
         if (this.userId === '') {
           fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/generateId', {
             method: 'POST',
-            body: JSON.stringify({ test: 'test' }),
-            mode: 'cors',
-            headers: {
-              'Content-Type': 'application/json',
-            },
+            body: JSON.stringify({ test: 'test' })
           })
             .then(async (resp) => {
               let respond = await resp.json();
