@@ -21,6 +21,7 @@ class ChatWidget {
     this.messages = [];
     this.cs = undefined;
     this.sid = document.currentScript.getAttribute('sid');
+    this.pageid = document.currentScript.getAttribute('pageid');
     this.delay = (ms) => new Promise((res) => setTimeout(res, ms));
   }
 
@@ -28,9 +29,10 @@ class ChatWidget {
     console.log(msg);
     console.log(this.sid);
     console.log(localStorage.getItem('userId'));
+    console.log(this.pageid);
     fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/website', {
       method: 'POST',
-      body: JSON.stringify({ message: msg, sid: this.sid,userid: "hoenojlk1" }),
+      body: JSON.stringify({ message: msg, sid: this.sid,userid: localStorage.getItem('userId'),pageid:this.pageid }),
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
