@@ -30,7 +30,7 @@ class ChatWidget {
     console.log(this.sid);
     console.log(localStorage.getItem('userId'));
     console.log(this.pageid);
-    fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/website', {
+    fetch('http://127.0.0.1:3030/message_from_website', {
       method: 'POST',
       body: JSON.stringify({ message: msg, sid: this.sid,userid: localStorage.getItem('userId'),pageid:this.pageid }),
       mode: 'cors',
@@ -150,7 +150,7 @@ class ChatWidget {
         )
           return;
         if (this.userId === '') {
-          fetch('https://chatbotey-gxkpqz66ta-od.a.run.app/generateId', {
+          fetch('http://127.0.0.1:3030/generateId', {
             method: 'POST',
             body: JSON.stringify({ test: 'test' })
           })
